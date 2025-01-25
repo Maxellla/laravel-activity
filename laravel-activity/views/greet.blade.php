@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Greet Page</title>
 </head>
 <body>
