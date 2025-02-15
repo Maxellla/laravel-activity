@@ -6,15 +6,8 @@ use Illuminate\Http\Request;
 
 class GreetController extends Controller
 {
-    // Show the greeting page
-    public function index()
+    public function greetMethod()
     {
-        return view('greet');
-    }
-
-    // Redirect to tasks
-    public function proceed()
-    {
-        return redirect()->route('tasks.index');
+        return view('greet', ['name' => 'Maxene']);
     }
 }

@@ -9,14 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id(); // Auto-incrementing primary key
-            $table->string('title'); // Title of the task
-            $table->text('description')->nullable(); // Optional description for the task
-            $table->boolean('is_completed')->default(false); // Track if the task is completed
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->id(); 
+            $table->string('title');
+            $table->text('description')->nullable(); 
+            $table->boolean('is_completed')->default(false); 
+            $table->timestamps(); 
         });
     }
 
