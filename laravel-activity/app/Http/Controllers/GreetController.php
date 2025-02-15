@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class GreetController extends Controller
 {
-    public function show()
+    // Show the greeting page
+    public function index()
     {
-        return view('greet'); // Calls the Blade template
+        return view('greet');
+    }
+
+    // Redirect to tasks
+    public function proceed()
+    {
+        return redirect()->route('tasks.index');
     }
 }

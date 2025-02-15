@@ -1,9 +1,14 @@
 <?php
 
 use App\Http\Controllers\GreetController;
+use App\Http\Controllers\TaskController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return 'Hello, Laravel!';
-});
+// First, greet the user
+Route::get('/', [GreetController::class, 'index'])->name('greet.index');
 
-Route::get('/greet', [GreetController::class, 'show']);
+// Proceed to the tasks page
+Route::get('/proceed', [GreetController::class, 'proceed'])->name('greet.proceed');
+
+// CRUD for tasks
+Route::resource('tasks', TaskController::class);
